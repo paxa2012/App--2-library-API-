@@ -21,7 +21,7 @@ export const fetchDataPopular = (url, id) => {
             .then(payload_list => {
                 if (id === 1) {
                     const payload = [];
-                    for (let key in payload_list.rates) {
+                    for (var key in payload_list.rates) {
                         payload.push({ name: key, value: payload_list.rates[key] })
                     }
                     dispatch(APIlist(payload, id))

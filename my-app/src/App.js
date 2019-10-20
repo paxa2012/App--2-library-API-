@@ -11,7 +11,6 @@ import Dashbord from './component/dashbordAPI/dashbord';
 import { adduser, activeUser } from './actions';
 import { AuthProvider } from './auth';
 import { fetchDataPopular } from './actions/fetch';
-
 import { PrivateRoute } from './component/authication/privateRoute';
 import { connect } from 'react-redux';
 import NewblankApi from './component/dashbordAPI/NewblankApi';
@@ -20,6 +19,19 @@ import NewblankApi from './component/dashbordAPI/NewblankApi';
 let App = (props) => {
  // console.log(props)
   const { adduser, allUser, activeuser, activeUser, fetchPopular} = props;
+
+  const WrapedHome =()=>{
+    return <Home {...props} /> 
+  }
+  const WrapedAddUser =()=>{
+    return <AddUser  adduser={adduser}/> 
+  }
+  const WrapedDashbord=()=>{
+    return <Dashbord activeuser={activeuser} getId={getId} fetchPopular={fetchPopular}  />
+  }
+  const WrapedNewblankApi = (p)=>{
+    return <NewblankApi allUser={allUser} activeuser={activeuser} {...p} />
+  }
   
   //console.log(userarr)
   return (
@@ -48,12 +60,12 @@ let App = (props) => {
         </div>
       </nav>
       <Switch>
-        <Route exact path="/home" render={() => <Home {...props} /> } />
+        <PrivateRoute exact path="/home" component={WrapedHome} />
         <Route path="/login" component={login} />
         <Route path="/callback" component={callback} />
-        <Route path="/user" render={(p) => <AddUser  adduser={adduser}/>} />
-        <Route path="/dashbord" render={() => <Dashbord activeuser={activeuser} getId={getId} fetchPopular={fetchPopular}  />} />
-        <Route path="/newblank/:id" render={(p) => <NewblankApi allUser={allUser} activeuser={activeuser} {...p} />} />
+        <PrivateRoute path="/user" component={WrapedAddUser} />
+        <PrivateRoute path="/dashbord" component={WrapedDashbord} />
+        <Route path="/newblank/:id" component={WrapedNewblankApi} />
         <Redirect to="/home" />
       </Switch >
     </AuthProvider>

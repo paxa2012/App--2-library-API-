@@ -1,6 +1,5 @@
 import React from 'react';
-import NewblankApi from './NewblankApi';
-import { NavLink, Redirect, Route } from 'react-router-dom';
+import { NavLink, Redirect } from 'react-router-dom';
 
 
 class Dashbord extends React.Component {

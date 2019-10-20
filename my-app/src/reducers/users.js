@@ -19,7 +19,7 @@ const Users = (state = [], action) => {
             return state.map(s => {
                 //console.log(uId);
 
-                if (uId == s.id) {
+                if (uId === s.id) {
                     return {
                         id: s.id, name: s.name, lastname: s.lastname, about: s.about, listAPI: s.listAPI.map(api => {
                             if (api.id === action.id) {

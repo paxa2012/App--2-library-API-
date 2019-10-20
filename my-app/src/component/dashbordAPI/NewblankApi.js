@@ -1,10 +1,6 @@
 import React from 'react';
 
 class NewblankApi extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = { users: [], usersA: []};
-    }
     render() {
         return (
             <div className="container" >
@@ -15,7 +11,7 @@ class NewblankApi extends React.Component {
                             return (
                                 u.listAPI.map((api, index) => {
                                     let id = parseInt(this.props.match.params.id);
-                                    if (api.id === id) {
+                                    if (api.id === 2) {
                                         //console.log(api)
                                         return (
                                             <div className="flex-container" key={index}>
@@ -25,7 +21,7 @@ class NewblankApi extends React.Component {
                                                             <div className="col-md-4 col-sm-12" key={i}>
                                                                 <div className="card-film">
                                                                     <div className="card-head">{f.title}</div>
-                                                                    <div className="card-body"><img className="responsive-img" src={`http://image.tmdb.org/t/p/original${f.poster_path}`} /></div>
+                                                                    <div className="card-body"><img className="responsive-img" src={`http://image.tmdb.org/t/p/original${f.poster_path}`} alt={f.title} /></div>
                                                                 </div>
                                                             </div>
                                                         )
@@ -34,8 +30,8 @@ class NewblankApi extends React.Component {
                                             </div>
                                         );
                                     }
-                                    else if (api.id === id) {
-                                        //console.log(api)
+                                    else if (api.id === 1) {
+                                        console.log(api)
                                         return (
                                             <div className="flex-container" key={index}>
                                                 {
