@@ -1,0 +1,84 @@
+.newUser{
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  margin: auto;
+}
+.flex-container{
+  display: flex;
+  flex-wrap: wrap;
+}
+.responsive-img{
+  width: 100%;
+}
+.movetoadduswr{
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.card{
+  transition: all 0.9s ease;
+ 
+}
+.card-film{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.card:hover{
+  box-shadow: 2px 5px 5px #cfd5db
+}
+.card-header{
+  font-size: 35px;
+  
+}
+.card-header .fas{
+  margin-right: 10px;
+}
+.card-header .fab{
+  margin-right: 10px;
+}
+.card-body .fab{
+  font-size: 22em;
+  display: flex;
+  justify-content: center;
+}
+.card-body .fas{
+  font-size: 22em;
+  display: flex;
+  justify-content: center;
+}
+.card-title{
+  font-size: 25px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.card-text{
+  font-size: 18px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.card-container{
+  display: flex;
+  margin: auto;
+}
+.card-container .row{
+  width: 100%;
+}
+.card-container-text{
+  
+}
+.card-container-btn{
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+.btn{
+}
