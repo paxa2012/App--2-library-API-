@@ -10,6 +10,13 @@ export const adduser = (name, lastname, about) => {
         about
     }
 }
+export const edituser = (payload) =>{
+    console.log(payload)
+    return{
+        type:'EDIT_USER',
+        payload
+    }
+}
 export const activeUser = (user) => {
     //console.log(user);
     return {

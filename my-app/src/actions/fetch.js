@@ -22,7 +22,7 @@ export const fetchDataPopular = (url, id) => {
                 if (id === 1) {
                     const payload = [];
                     for (var key in payload_list.rates) {
-                        payload.push({ name: key, value: payload_list.rates[key] })
+                        payload.push({ title: key, value: payload_list.rates[key] })
                     }
                     dispatch(APIlist(payload, id))
                 }

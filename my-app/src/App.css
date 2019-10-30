@@ -71,14 +71,19 @@
 .card-container .row{
   width: 100%;
 }
-.card-container-text{
-  
-}
 .card-container-btn{
   height: 100%;
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
 }
-.btn{
+.edit-text{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.users{
+  margin-top: 80px;
 }

@@ -15,17 +15,26 @@ const Users = (state = [], action) => {
                     ]
                 }
             ]
+        case 'EDIT_USER':
+            return state.map(eu => {
+                if (eu.id === action.payload.id) {
+                    return action.payload
+                }
+                return eu
+            })
         case 'API_LOAD':
             return state.map(s => {
                 //console.log(uId);
 
                 if (uId === s.id) {
-                    return {
+                    return {/*id: s.id, name: s.name, lastname: s.lastname, about: s.about, listAPI: action.payload*/
+
                         id: s.id, name: s.name, lastname: s.lastname, about: s.about, listAPI: s.listAPI.map(api => {
                             if (api.id === action.id) {
                                 return { id: api.id, name: api.name, desc: api.desc, database: action.payload, img: api.img, url: api.url }
                             }
-                            return api;
+                            return api
+
                         })
                     }
                 }
