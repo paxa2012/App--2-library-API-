@@ -18,8 +18,8 @@ class NewblankApi extends React.Component {
                                                         return(
                                                             <div className="col-md-4 col-sm-12" key={i}>
                                                                 <div className="card">
-                                                                    <div className="card-head">{d.title}</div>
-                                                                    <div className="card-body">{d.value}<img className="responsive-img" src={`http://image.tmdb.org/t/p/original${d.poster_path}`} alt={d.title} /></div>
+                                                                    <div className="card-head">{d.title}{d.author.key}</div>
+                                                                    <div className="card-body">{d.value}{d.timestamp}<img className="responsive-img" src={`http://image.tmdb.org/t/p/original${d.poster_path}`} alt={d.title} /></div>
                                                                 </div>
                                                             </div>
                                                         )

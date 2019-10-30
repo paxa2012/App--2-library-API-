@@ -29,6 +29,11 @@ export const fetchDataPopular = (url, id) => {
                 else if (id === 2) {
                     dispatch(APIlist(payload_list.results, id))
                 }
+                else if (id === 3){
+                    
+                    dispatch(APIlist(payload_list, id));
+                    
+                }
             })
     }
 }
