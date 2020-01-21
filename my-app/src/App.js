@@ -31,7 +31,7 @@ let App = (props) => {
   const WrapedNewblankApi = (p) => {
     return <NewblankApi allUser={allUser} activeuser={activeuser} {...p} />
   }
-  console.log(allUser)
+  //console.log(allUser)
   return (
     <AuthProvider>
       <nav className="navbar navbar-expand-lg fixed-top navbar-light bg-light">
